@@ -6,9 +6,9 @@ html{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 400px;
-  position: relative;
-  margin: auto;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
 }
 
 /* Hide the images by default */
@@ -96,6 +96,7 @@ html{
 /* CSS */
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     background: #232121;
@@ -103,7 +104,19 @@ footer {
 }
 
 .footer-section {
-    flex-basis: 30%;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    footer {
+        flex-direction: row;
+    }
+
+    .footer-section {
+        flex-basis: 30%;
+        margin-bottom: 0;
+    }
 }
 
 
