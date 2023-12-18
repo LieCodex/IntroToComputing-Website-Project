@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="uikit.js"></script>
     <script src="uikit-icons.js"></script>
+    <script src="main.js"></script>
     
     <script src="https://unpkg.com/typeit@5.0.2/dist/typeit.min.js"></script>
     
@@ -35,14 +36,15 @@
     <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     
     <div class="uk-navbar-left">
+        <span class="uk-navbar-item uk-logo uk-light"><image id="logo" src="Untitled-design-1-1.png" alt="logo" /></span>
         <a href="" class="uk-navbar-item uk-logo uk-light">Gamology</a>
     </div>
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav uk-light">
-            <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="mailto:" uk-scroll>Home</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="mailto:" uk-scroll>Contact</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About/Contacts</a></li>
 
         </ul>
 
@@ -103,8 +105,8 @@
 <h3 class="uk-margin-xlarge-left uk-light">About Me</h3>
 <!-- Change here to ur paragraph -->
 
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend posuere tortor vel lobortis. Morbi pretium in sapien non suscipit. Nam ac efficitur enim. Vestibulum accumsan erat sit amet nulla commodo, nec varius felis aliquam. Aliquam suscipit mauris lacus, at euismod purus tempor aliquam. Donec varius sem nisl. Fusce augue tortor, hendrerit at elit quis, aliquet blandit eros. Nam gravida sem velit, eu placerat nunc commodo ut. <br><br>Maecenas ultricies magna nec nisi egestas, in posuere velit tincidunt. Nam quis turpis non ligula dapibus bibendum sit amet at felis. Vestibulum ornare tempor nulla, quis sodales ex consequat vel. Morbi sollicitudin ligula eget mattis euismod. Nulla scelerisque malesuada arcu a vulputate. Phasellus ac lectus consequat, eleifend libero id, tincidunt lectus. Sed tempus gravida odio, sed semper neque aliquet imperdiet.</p>
-<a href="" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href="" class="uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="" class=" uk-light uk-button-text" uk-icon="linkedin"></a>
+<p class="uk-margin-xlarge-left uk-margin-xlarge-right">I am a self taught game developer, I started leaning game dev when i was on grade 10, I haven't made any significance progress during that time because my school and game learning time is split apart. My passion since then is making games, i have made a couple of unfinished games as a training but dropped game dev for a while due to burn out. <br><br>I came back to game dev on grade 12, since we were tasked to make an educational game for our research, Thankfully due to my background in game dev, I manage to make one, it is titled Spell Bound.</p>
+<a href="https://www.instagram.com/kiritolee65/" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href="https://www.facebook.com/you.live.3152130" class="uk-light uk-button-text" uk-icon="facebook"></a> &nbsp;<a href="https://github.com/LieCodex" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="https://www.tiktok.com/@liecodex2" class=" uk-light uk-button-text" uk-icon="tiktok"></a>
 
 <!-- About Me Ends -->
 
@@ -122,18 +124,74 @@
 <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
 
     <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4>Project Name</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a class="uk-button-text uk-text-decoration-none" href="">
-            <span uk-icon="icon: link">
-            </span> Website Link </a>
+        <h4>Spell Bound: The STI Adventure</h4>
+        <p>This is a game made by a team of 2 people, it is set on our past school called STI,   it's a turned based game combining the exsting games bookworm adventure and wordscape. <br><br>Click the arrows to see photos</p>
+        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides1 fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="/image-153x300.png" style="width:100%" >
+      <div class="text">Gameplay</div>
+    </div>
+  
+    <div class="mySlides1 fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="/image-1.png" style="width:100%" >
+      <div class="text">Novel like story</div>
+    </div>
+  
+    <div class="mySlides1 fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="/image.png" style="width:100%" >
+      <div class="text">More Gameplay</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1, 'mySlides1', 'dot1')">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'mySlides1', 'dot1')">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot1" onclick="currentSlide(1, 'mySlides1', 'dot1')"></span>
+    <span class="dot1" onclick="currentSlide(2, 'mySlides1', 'dot1')"></span>
+    <span class="dot1" onclick="currentSlide(3, 'mySlides1', 'dot1')"></span>
+  </div>
+            <span uk-icon="icon: check">
+            </span> Completed </span>
+            <br>
+            <div uk-icon="icon: download"></div>
+            <a href="https://drive.google.com/file/d/17VZMXrvD4Q42c2L28pSseerTg1hMotpA/view?usp=sharing" target="_blank" > Download Game APK</a>
+            
         </div>
         <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-            <h4>Project Name</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="uk-button-text uk-text-decoration-none" href="">
-                <span uk-icon="icon: link">
-                </span> Website Link </a>
+            <h4>Frog Ninja</h4>
+            <p>this is a game I haven't really made any progress so far since I'm quite busy with school but i will try to finish it. <br><br>Click the arrows to see photos</p>
+            <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides2 fade">
+      <div class="numbertext">1 / 1</div>
+      <img src="/image_2023-06-24_110808939.png" style="width:100%" >
+      <div class="text">Gameplay</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1, 'mySlides2', 'dot2')">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 'mySlides2', 'dot2')">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot2" onclick="currentSlide(1, 'mySlides2', 'dot2')"></span>
+  </div>
+                <span uk-icon="icon: arrow-right">
+                </span> Ongoing </a>
             </div></div>
 
 
