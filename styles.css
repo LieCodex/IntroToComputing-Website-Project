@@ -93,4 +93,19 @@ html{
     width: 40px;
     border-radius: 20px;
 }
+/* CSS */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #232121;
+    color: #6e7071;
+}
+
+.footer-section {
+    flex-basis: 30%;
+}
+
+
+
 

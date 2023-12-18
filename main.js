@@ -42,3 +42,5 @@ function showSlides(n, slidesClass, dotsClass) {
     slideIndex2 = slideIndex;
   }
 }
+
+
