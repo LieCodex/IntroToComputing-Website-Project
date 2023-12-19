@@ -91,7 +91,7 @@ html{
 }
 #logo{
     width: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 /* CSS */
 footer {
@@ -101,6 +101,7 @@ footer {
     padding: 10px;
     background: #232121;
     color: #6e7071;
+    
 }
 
 .footer-section {
@@ -136,6 +137,13 @@ footer {
 }
 #content{
   color: #9299b0;
+}
+
+.pictures{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
