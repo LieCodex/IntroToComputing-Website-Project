@@ -119,6 +119,23 @@ footer {
     }
 }
 
+.unityVideo{
+  display: flex;
+  justify-content: center;
+  opacity: 30%;
+}
+
+.svg{
+  background-image: url("Game-Controller-Outline-White.svg");
+  background-size: 100% 100%;
+}
+
+#title{
+  color: #274abc;
+}
+#content{
+  color: #9299b0;
+}
 
 
 
