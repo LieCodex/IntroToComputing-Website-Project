@@ -33,9 +33,20 @@
         });
       </script>
     <title>Portfolio</title>
+
+    <style>
+        #projectile {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
 </head>
-<body>
+<body class="unselectable">
 <!-- Navigation Bar -->
+
     <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     
     <div class="uk-navbar-left">
@@ -48,7 +59,7 @@
             <li><a class="uk-button-text uk-text-capitalize" href="#" uk-scroll>Home</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About/Contacts</a></li>
-
+            <li ><a uk-icon="icon: play;"class="uk-height-meduim uk-button-text uk-button-default" onclick="toggleProjectiles()"></a></li>
             
         </ul>
 
@@ -101,12 +112,15 @@
 <br>
 
 
+
+
 <hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
 
 <!-- About Me -->
 <section  class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
 <h3 id="about" class="uk-margin-xlarge-left uk-light">About Me</h3>
 <!-- Change here to ur paragraph -->
+<div id="projectile"></div>
 
 <p class="uk-margin-xlarge-left uk-margin-xlarge-right">I am a self taught game developer, I started learning game dev when i was on grade 10 using the unity Game engine, since it is the most famous therefor it also has the most amount of tutorial online, I haven't made any significance progress during that time because my school and game learning time is split apart. My passion since then is making games, i have made a couple of unfinished games as a training but dropped game dev for a while due to burn out. <br><br>I came back to game dev on grade 12, since we were tasked to make an educational game for our research, Thankfully due to my background in game dev and with the help of a ton and i mean ton of youtube videos, I manage to make one, it is titled Spell Bound.</p>
 <a href="https://www.instagram.com/kiritolee65/" class="uk-margin-xlarge-left uk-light uk-button-text " uk-icon="instagram"></a> &nbsp;<a href="https://www.facebook.com/you.live.3152130" class="uk-light uk-button-text" uk-icon="facebook"></a> &nbsp;<a href="https://github.com/LieCodex" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="https://www.tiktok.com/@liecodex2" class=" uk-light uk-button-text" uk-icon="tiktok"></a>
@@ -233,7 +247,65 @@
         <p>privacy and policy</p>
     </div>
 </footer>
+<script>
+    var projectile = document.getElementById('projectile');
+var speed = 5;
+var angle = 10;
+var x = 0;
+var y = 0;
+var isProjectileEnabled = true; // Add this line
 
+function moveProjectile(e) {
+    if (!isProjectileEnabled) return; // Add this line
+    x = e.clientX;
+    y = e.clientY;
+    projectile.style.left = x + 'px';
+    projectile.style.top = y + 'px';
+}
+
+function createProjectile(e) {
+    if (!isProjectileEnabled) return; // Add this line
+    angle = Math.random() * 360;
+    var newProjectile = projectile.cloneNode(true);
+    document.body.appendChild(newProjectile);
+    newProjectile.style.left = e.clientX + 'px';
+    newProjectile.style.top = e.clientY + 'px';
+    animateProjectile(newProjectile, e.clientX, e.clientY, Math.cos(angle) * speed, Math.sin(angle) * speed);
+}
+
+function animateProjectile(proj, x, y, vx, vy) {
+    if (x < 0 || x > window.innerWidth || y < 0 || y > window.innerHeight) {
+        proj.remove();
+    } else {
+        x += vx;
+        y += vy;
+        proj.style.left = x + 'px';
+        proj.style.top = y + 'px';
+        requestAnimationFrame(function() {
+            animateProjectile(proj, x, y, vx, vy);
+        });
+    }
+}
+
+document.addEventListener('mousemove', moveProjectile);
+document.addEventListener('click', createProjectile);
+
+// Add this function to toggle the projectiles
+function toggleProjectiles() {
+    var x = document.getElementById("projectile");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    isProjectileEnabled = !isProjectileEnabled;
+}
+
+window.onload = function() {
+    toggleProjectiles();
+  };
+
+</script>
     
 </body>
 </html>

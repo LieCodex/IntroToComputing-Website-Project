@@ -146,5 +146,14 @@ footer {
   margin-right: auto;
 }
 
+.unselectable {
+  -webkit-user-select: none;  /* Chrome, Opera, Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
+  user-select: none;          /* Standard syntax */
+}
+
+
+
 
 
