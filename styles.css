@@ -163,9 +163,7 @@ footer {
 ::-webkit-scrollbar-thumb:hover{
   background: linear-gradient(transparent, #4f5ff3);
 }
-body{
-  overflow: hidden;
-}
+
 
 
 
