@@ -153,6 +153,17 @@ footer {
   user-select: none;          /* Standard syntax */
 }
 
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent, #3046ed);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent, #4f5ff3);
+}
+
 
 
 
