@@ -118,6 +118,20 @@ footer {
         flex-basis: 30%;
         margin-bottom: 0;
     }
+    
+}
+
+@media (max-width: 480px) and (min-width:320px)  { 
+  .gameController{
+    margin-top: -150px !important;
+    margin-left: 180px !important;
+    width: 200px !important;
+  }
+  .mainText{
+    font-size: medium !important;
+  }
+  
+  
 }
 
 .unityVideo{
@@ -163,7 +177,13 @@ footer {
 ::-webkit-scrollbar-thumb:hover{
   background: linear-gradient(transparent, #4f5ff3);
 }
-
+.gameController{
+  z-index: -1;
+  position: absolute;
+  margin-top: -400px;
+  margin-left: 700px;
+  opacity: 40%;
+}
 
 
 
